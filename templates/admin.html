@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Métadonnées et titre de la page -->
+    <meta charset="UTF-8">
+    <title>Page d'administration</title>
+
+    <!-- Style principal de la page -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Conteneur principal de la page -->
+    <div class="container">
+
+        <!-- Bloc pour la création de plan de formation -->
+        <div id="form-block" class="block">
+            <h1 id="ai-learning">AI-Learning</h1>
+            <h1 id="description">Plateforme de création de <br> formations e-learning <br> assitée par IA</h1>
+            <h2>Sujet de la formation:</h2>
+            <!-- Formulaire pour saisir le sujet de la formation -->
+            <form id="subject-form">
+                <input id="subject" type="text" name="subject" autocomplete="off"
+                    placeholder="Entrez le sujet souhaité..."><br>
+                <input id="submit" type="submit" value="Soumettre">
+            </form>
+            <!-- Message affiché lors du chargement -->
+            <div id="loading-message-plan" style="display: none">
+                Chargement du plan de formation...
+            </div>
+        </div>
+
+        <!-- Bloc pour afficher le plan de formation -->
+        <div id="training-plan-block" class="block" style="display: none">
+            <h1>Plan de formation</h1>
+            <div id="training-plan-content"></div>
+        </div>
+
+        <!-- Bloc pour modification du plan de formation wt la génération du contenu -->
+        <div id="generate-block" class="block" style="display: none">
+            <!-- Zone de texte pour saisir les modifications -->
+            <textarea id="modification-request-plan" rows="4" cols="50"
+                placeholder="Entrez vos modifications ici..."></textarea>
+
+            <!-- Bouton pour soumettre les modifications -->
+            <button id="modify-btn-plan" class="btn">Modifier le plan de formation</button>
+            <!-- Message affiché lors de la modification -->
+            <div id="loading-message-modify-plan" style="display: none;">
+                Modification du plan de formation <br> en cours...
+            </div>
+
+            <!-- Bouton pour générer le plan de formation -->
+            <button id="generate-btn" class="btn">Générer</button>
+            <!-- Message affiché lors de la génération -->
+            <div id="loading-message-generation" style="display: none">
+                Génération du contenu des sections <br> en cours...
+            </div>
+
+            <!-- Section pour les bouttons de contenu par section -->
+            <div id="section-links"></div>
+        </div>
+
+    </div>
+
+    <!-- Conteneur pour le bouton de validation -->
+    <div id="central-button-container">
+        <!-- Boutton pour valider la formation et la pousser sur le site -->
+        <button id="validate-btn" class="btn">Valider la formation</button>
+    </div>
+
+    <!-- Bibliothèque jQuery et autres fichiers JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Fichier JavaScript pour des fonctions utilitaires -->
+    <script src="/static/utils.js"></script>
+    <!-- Fichier JavaScript principal pour gérer les interactions de cette page -->
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Métadonnées et titre de la page -->
+    <meta charset="UTF-8">
+    <title>Page d'administration</title>
+
+    <!-- Style principal de la page -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+</head>
+
+<body>
+
+    <!-- Conteneur principal de la page -->
+    <div class="container">
+
+        <!-- Bloc pour afficher le contenu généré -->
+        <div class="block" id="content-block">
+            <!-- Zone où le contenu généré est inséré -->
+            <div id="generated-content" class="content">
+                {{ section_content | safe }}
+            </div>
+        </div>
+
+        <!-- Bloc pour entrer et appliquer les modifications -->
+        <div class="block">
+            <h2>Modifications</h2>
+            <!-- Zone de texte pour saisir les modifications -->
+            <textarea id="modification-request-content" class="content" rows="10" cols="50"
+                placeholder="Entrez vos modifications ici..."></textarea>
+
+            <!-- Bouton pour appliquer les modifications saisies -->
+            <button id="modify-btn-content" class="btn">Appliquer les modifications</button>
+
+            <!-- Message affiché lors de la modification du contenu -->
+            <div id="loading-message-modify-content" style="display: none;">
+                Modification du contenu <br> en cours...
+            </div>
+
+            <!-- Bouton pour revenir à l'accueil -->
+            <button id="back-btn" class="btn">Revenir à l'accueil</button>
+        </div>
+
+    </div>
+
+    <!-- Bibliothèque jQuery et autres fichiers JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Fichier JavaScript pour des fonctions utilitaires -->
+    <script src="/static/utils.js"></script>
+    <!-- Fichier JavaScript principal pour gérer les interactions de cette page -->
+    <script src="/static/script.js"></script>
+    <!-- Mise en forme des blocs de code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

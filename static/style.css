@@ -1,0 +1,248 @@
+body {
+    background-color: #27374D;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: space-between;
+    width: 100%;
+    margin: 70px
+}
+
+.block {
+    align-items: center;
+    background-color: #9DB2BF;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    overflow: auto;
+    text-align: center;
+    width: 100%;
+    padding: 20px
+}
+
+#form-block {
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    display: flex
+}
+
+#training-plan-block {
+    align-items: flex-start;
+    background-color: #DDE6ED;
+    color: #27374D;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-start;
+    overflow: auto;
+    text-align: left;
+    width: 100%;
+    padding: 20px
+}
+
+#generate-block {
+    padding: 0;
+}
+
+#content-block {
+    color: #27374D;
+    background-color: #DDE6ED;
+    padding: 0
+}
+
+#loading-message-plan {
+    font-size: 30px;
+    color: #27374D;
+}
+
+#loading-message-modify-plan,
+#loading-message-modify-content,
+#loading-message-generation {
+    font-size: 30px;
+    color: #27374D;
+    padding: 0 20px;
+
+}
+
+#ai-learning {
+    font-family: 'Lora', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #27374D;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #27374D;
+}
+
+h2 {
+    color: #526D82;
+}
+
+input,
+textarea {
+    color: #526D82;
+    background-color: #DDE6ED;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    resize: none;
+    padding: 0.5rem;
+}
+
+textarea:focus,
+input:focus {
+    outline: 2px solid #526D82;
+}
+
+#subject {
+    width: 250px;
+    text-align: center;
+}
+
+#modification-request-plan,
+#modification-request-content {
+    height: 300px;
+    width: 80%
+}
+
+.btn,
+#submit {
+    background-color: #fbce43;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #27374D;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 15px 20px;
+    width: auto;
+    min-width: 150px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+#submit:hover {
+    background-color: #e5af2f;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active,
+#submit:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    margin-bottom: 10px
+}
+
+#central-button-container {
+    align-items: center;
+    bottom: -14Px;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    position: fixed
+}
+
+#section-links {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.row {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.col {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: 5px;
+}
+
+#section-links button {
+    font-size: 15px;
+    margin: 10px;
+    background-color: #DDE6ED;
+    color: #27374D;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+    padding: 10px 15px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100%;
+    white-space: normal;
+}
+
+#section-links button:hover {
+    background-color: #fbce43;
+}
+
+#generated-content {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 20px;
+    text-align: left;
+}
+
+#back-btn {
+    margin-top: 100px;
+}
+
+#section-links::-webkit-scrollbar {
+    width: 12px;
+    background-color: #9DB2BF;
+}
+
+#section-links::-webkit-scrollbar-thumb {
+    background-color: #DDE6ED;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #DDE6ED;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9DB2BF;
+    border-radius: 6px;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Poppins', sans-serif;
+}
