@@ -25,7 +25,7 @@ def prompt_plan(subject):
 
 # Requête Open AI
 def gpt_request(prompt):
-    openai.api_key = "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"
+    openai.api_key = "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"
 
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
